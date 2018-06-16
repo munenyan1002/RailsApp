@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  # peopleコントローラーへのアクセス
+  get 'people/index'
+  get 'people', to: 'people#index'
+  get 'people/show'
+  get 'people/:id', to: 'people#show'
+
+
   get 'dengonban/index'
   post 'dengonban/index'
   get 'dengonban', to: 'dengonban#index'
